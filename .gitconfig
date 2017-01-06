@@ -1,0 +1,8 @@
+[alias]
+        st = status
+        co = checkout
+        l = log --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -n 10
+
+[user]
+        email = traviscjefferson@gmail.com
+        name = Travis Jefferson

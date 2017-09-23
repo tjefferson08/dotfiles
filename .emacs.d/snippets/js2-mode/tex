@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+#name : test.expect();
+# --
+test.expect($0);

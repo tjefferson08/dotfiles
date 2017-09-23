@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+#name : expect().toEqual()
+# --
+expect($1).toEqual($0);

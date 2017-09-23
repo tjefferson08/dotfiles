@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+#name : test.equal(1, 1);
+# --
+test.strictEqual($1, $0);

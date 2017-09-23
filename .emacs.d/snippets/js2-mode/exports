@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+#name : exports
+# --
+exports['$1'] = {
+    setUp: MonkeyPatcher.setUp,
+    tearDown: MonkeyPatcher.tearDown,
+    '$2': function (test) {
+        test.expect(1);
+        $0
+        test.done();
+    }
+};

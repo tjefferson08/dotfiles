@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+#name : test.fail()
+# --
+function () { test.fail($0); });

@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+#name : require() (node)
+# --
+var $1 = require('$0$1');

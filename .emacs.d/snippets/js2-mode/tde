@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+#name : test.deepStrictEqual({}, {});
+# --
+test.deepStrictEqual($1, $0);

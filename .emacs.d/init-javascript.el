@@ -49,6 +49,7 @@
                 (add-to-list 'js2-additional-externs "spyOn")
                 (add-to-list 'js2-additional-externs "jasmine")
                 (add-to-list 'js2-additional-externs "mixpanel")
+                (add-to-list 'js2-additional-externs "chrome")
                 (add-to-list 'js2-additional-externs "angular")))))
 
 (eval-after-load

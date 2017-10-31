@@ -138,19 +138,6 @@
 
 (global-set-key (kbd "C-M-m") 'mc/mark-next-like-this)
 
-(global-set-key (kbd "S-<f2>")
-                (lambda ()
-                  (interactive)
-                  (dired "~/glaze-tjefferson08")))
-(global-set-key (kbd "S-<f2>")
-  (lambda ()
-    (interactive)
-    (dired "~/control-tjefferson08")))
-(global-set-key (kbd "S-<f3>")
-  (lambda ()
-    (interactive)
-    (dired "~/yoshimi-tjefferson08")))
-
 (global-set-key "\C-x\C-m" 'helm-M-x)
 (global-set-key "\C-x\m" 'helm-M-x)
 (global-set-key "\C-c\C-m" 'helm-M-x)
@@ -265,19 +252,6 @@
 (global-set-key (kbd "M-Y") 'yank-pop-forward)
 
 (global-set-key (kbd "C-M-m") 'mc/mark-next-like-this)
-
-(global-set-key (kbd "S-<f2>")
-                (lambda ()
-                  (interactive)
-                  (dired "~/glaze-tjefferson08")))
-(global-set-key (kbd "S-<f2>")
-  (lambda ()
-    (interactive)
-    (dired "~/control-tjefferson08")))
-(global-set-key (kbd "S-<f3>")
-  (lambda ()
-    (interactive)
-    (dired "~/yoshimi-tjefferson08")))
 
 ;; keybindings
 (global-set-key "\C-x\C-m" 'helm-M-x)
@@ -412,19 +386,6 @@
 (global-set-key (kbd "M-Y") 'yank-pop-forward)
 
 (global-set-key (kbd "C-M-m") 'mc/mark-next-like-this)
-
-(global-set-key (kbd "S-<f2>")
-                (lambda ()
-                  (interactive)
-                  (dired "~/glaze-tjefferson08")))
-(global-set-key (kbd "S-<f2>")
-  (lambda ()
-    (interactive)
-    (dired "~/control-tjefferson08")))
-(global-set-key (kbd "S-<f3>")
-  (lambda ()
-    (interactive)
-    (dired "~/yoshimi-tjefferson08")))
 
 (global-set-key (kbd "M-p") 'move-text-up)
 (global-set-key (kbd "M-n") 'move-text-down)

@@ -296,8 +296,8 @@ character on current line (in any case, move to next line)."
         (message "Buffer '%s' is not visiting a file!" name)
       (progn    (copy-file filename newname 1)  (delete-file filename)  (set-visited-file-name newname)         (set-buffer-modified-p nil)     t))))
 
-
 (defun toggle-window-split ()
+
   (interactive)
   (if (= (count-windows) 2)
       (let* ((this-win-buffer (window-buffer))
@@ -384,11 +384,6 @@ character on current line (in any case, move to next line)."
   (setq jade-tab-width 4)
   (hl-line-mode 1))
 
-(defun js2-add-meteor-externs ()
-  (interactive)
-  (add-to-list 'js2-additional-externs "Mongo")
-  (add-to-list 'js2-additional-externs "Meteor"))
-
 (defun my-web-mode-hook ()
   (setq indent-tabs-mode nil)
   (setq web-mode-markup-indent-offset 2)
@@ -419,11 +414,6 @@ character on current line (in any case, move to next line)."
         (kill-buffer "*npm-test*")))
   (rename-buffer "*npm-test*")
   (switch-to-buffer (other-buffer)))
-
-(defun open-coverage ()
-  (interactive)
-  (browse-url
-   (concat "file:///" (projectile-project-root) "coverage/lcov-report/index.html")))
 
 (defun get-latest-commit-hash ()
   (interactive)

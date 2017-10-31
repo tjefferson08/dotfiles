@@ -282,6 +282,10 @@
 (put 'downcase-region 'disabled nil)
 (remove-hook 'find-file-hooks 'vc-find-file-hook)
 
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
+(add-to-list 'comint-output-filter-functions 'ansi-color-process-output)
+
+
 (defun my-sml-mode-hook()
   ;; disable abbrev-mode
   (abbrev-mode -1))

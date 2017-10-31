@@ -9,18 +9,13 @@
 (defalias 'gho (lambda () (interactive) (github-link "tjefferson08" nil)))
 (defalias 'ghu (lambda () (interactive) (github-link nil nil)))
 (defalias 'le (lambda () (interactive) (load-file "~/.emacs.d/init.el")))
-(defalias 'lf 'load-file)
-(defalias 'paste 'clipboard-yank)
 (defalias 'pgm 'projectile-global-mode)
 (defalias 'qr 'query-replace)
 (defalias 'qrr 'query-replace-regexp)
 (defalias 'rb 'revert-buffer)
 (defalias 'rr 'replace-regexp)
-(defalias 'sm 'smerge-mode)
 (defalias 'ttl 'toggle-truncate-lines)
 (defalias 'tws 'toggle-window-split)
-(defalias 'gj 'grunt-jasmine)
-(defalias 'oc 'open-coverage)
 
 ;; home-grown (or stolen) elisp
 (defun clean-function-definitions-and-blocks ()
@@ -214,11 +209,7 @@ to the current branch. Uses Magit."
    (format "cd %s && bin/rspec %s"
            (projectile-project-root)
            (expand-file-name (buffer-file-name))) t))
-(defun grunt-jasmine ()
-  (interactive)
-  (setq comint-scroll-to-bottom-on-output nil)
-  (async-shell-command "cd ~/glaze-tjefferson08 && grunt jasmine" "jasmine-output"))
-;; (switch-to-next-buffer))
+
 
 (defun notify-compilation-result (buffer msg)
   "Notify that the compilation is finished,

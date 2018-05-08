@@ -15,12 +15,12 @@
 (depends-on "exec-path-from-shell")
 (depends-on "helm")
 (depends-on "helm-dash")
+(depends-on "flycheck")
 
 (depends-on "projectile")
 (depends-on "helm-ag")
 (depends-on "helm-projectile")
 (depends-on "color-theme")
-(depends-on "help-fns+")
 (depends-on "scss-mode")
 (depends-on "web-mode")
 (depends-on "paredit")
@@ -31,7 +31,6 @@
 (depends-on "hydra")
 (depends-on "aggressive-indent")
 (depends-on "json-mode")
-(depends-on "dired+")
 (depends-on "org-bullets")
 (depends-on "org-beautify-theme")
 
@@ -52,6 +51,7 @@
 (depends-on "anzu")
 (depends-on "rust-mode")
 (depends-on "toml-mode")
+(depends-on "prettier-js")
 
 
 ;; Requires poppler to work

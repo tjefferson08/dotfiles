@@ -1,6 +1,5 @@
 (require 'coffee-mode)
 (require 'company)
-(require 'dired+)
 (require 'expand-region)
 (require 'flycheck)
 (require 'gnus)

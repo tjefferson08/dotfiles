@@ -193,7 +193,7 @@ to the current branch. Uses Magit."
   "E.g. 'rspec ./spec/models/tap_spec.rb:36'"
   (interactive)
   (compile
-   (format "cd %s && bin/rspec %s"
+   (format "cd %s && bundle exec rspec %s"
            (projectile-project-root)
            (concat
             (expand-file-name (buffer-file-name))
@@ -206,7 +206,7 @@ to the current branch. Uses Magit."
 (defun rspec-run-test-file ()
   (interactive)
   (compile
-   (format "cd %s && bin/rspec %s"
+   (format "cd %s && bundle exec rspec %s"
            (projectile-project-root)
            (expand-file-name (buffer-file-name))) t))
 

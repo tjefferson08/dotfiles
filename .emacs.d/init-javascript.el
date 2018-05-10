@@ -6,7 +6,7 @@
       (require 'yasnippet)
       (require 'company)
       (require 'prettier-js)
-      (setq prettier-target-mode "js2-mode")
+      (setq prettier-js-args '("--single-quote=true"))
       (interactive)
       ;; (flycheck-select-checker 'javascript-eslint)
       ;; (flycheck-mode 1)
@@ -29,6 +29,7 @@
       (setq js2-basic-offset 2)
       (setq js2-strict-inconsistent-return-warning nil))
 
+    (add-hook 'js2-mode-hook 'prettier-js-mode)
     (add-hook 'js2-mode-hook 'my-js2-mode-hook)
     (add-hook 'js2-init-hook
               (lambda ()

@@ -53,7 +53,7 @@
 (depends-on "rust-mode")
 (depends-on "toml-mode")
 (depends-on "prettier-js")
-
+(depends-on "rjsx-mode")
 
 ;; Requires poppler to work
 (depends-on "pdf-tools")

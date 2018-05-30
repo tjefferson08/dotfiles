@@ -45,14 +45,19 @@
 (setq delete-trailing-whitespace-on-save t)
 (defun my-delete-trailing-whitespace ()
   (interactive)
-  (when (and (boundp 'delete-trailing-whitespace-on-save) delete-trailing-whitespace-on-save)
+  (when (and
+         (boundp 'delete-trailing-whitespace-on-save)
+         delete-trailing-whitespace-on-save)
     (delete-trailing-whitespace (point-min) (point-max))))
 (add-hook 'before-save-hook 'my-delete-trailing-whitespace)
 
 (setq untabify-on-save t)
 (defun my-untabify ()
   (interactive)
-  (when (and (boundp 'untabify-on-save) untabify-on-save)
+  (when (and
+         (not (derived-mode-p 'go-mode))
+         (boundp 'untabify-on-save)
+         untabify-on-save)
     (untabify (point-min) (point-max))))
 (add-hook 'before-save-hook 'my-untabify)
 

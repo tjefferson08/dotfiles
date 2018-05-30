@@ -4,6 +4,9 @@ export HOMEBREW_GITHUB_API_TOKEN=23f6fedb6af8655580a9c466eab780c2dbb79c67
 export PATH="$PATH:./node_modules/.bin"
 export RBENV_ROOT=/usr/local/var/rbenv
 export CAPYBARA_CHROME_BINARY="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOPATH/bin"
+export EDITOR="emacsclient -c"
 
 if [ -f ~/.bashrc ]; then
    source ~/.bashrc

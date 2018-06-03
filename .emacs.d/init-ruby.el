@@ -1,5 +1,3 @@
-(require 'rvm)
-
 (add-hook 'ruby-mode-hook 'my-ruby-hook)
 
 (defun my-ruby-hook ()
@@ -14,7 +12,6 @@
   (local-set-key "\C-c\C-f" 'rspec-run-test-file)
   (local-set-key "\C-c\C-t" 'rspec-run-test-at-point)
   (local-set-key "\r" 'newline-and-indent)
-  (rvm-activate-corresponding-ruby)
   (subword-mode 1))
 
 (eval-after-load 'company

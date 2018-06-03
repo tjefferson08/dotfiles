@@ -142,10 +142,6 @@
 (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
 (cask-initialize)
 
-(require 'org-bullets)
-;; (add-to-list 'load-path "~/.emacs.d/elisp/")
-;; (add-to-list 'load-path "~/fogbugz")
-
 ;; load my custom init files
 (load "~/prettier/editors/emacs/prettier-js.el" t)
 (add-hook 'before-save-hook 'prettier-before-save)

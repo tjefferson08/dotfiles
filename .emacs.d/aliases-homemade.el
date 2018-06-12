@@ -210,6 +210,25 @@ to the current branch. Uses Magit."
            (projectile-project-root)
            (expand-file-name (buffer-file-name))) t))
 
+(defun exunit-run-test-at-point ()
+  (interactive)
+  (compile
+   (format "cd %s && mix test %s"
+           (projectile-project-root)
+           (concat
+            (expand-file-name (buffer-file-name))
+            ":"
+            (number-to-string (line-number-at-pos))))
+   t))
+
+(defun exunit-run-test-file ()
+  (interactive)
+  (compile
+   (format "cd %s && mix test %s"
+           (projectile-project-root)
+            (expand-file-name (buffer-file-name)))
+   t))
+
 
 (defun notify-compilation-result (buffer msg)
   "Notify that the compilation is finished,

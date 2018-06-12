@@ -1,3 +1,4 @@
+
 (source melpa)
 (source gnu)
 (depends-on "smart-mode-line")
@@ -54,6 +55,7 @@
 (depends-on "toml-mode")
 (depends-on "prettier-js")
 (depends-on "rjsx-mode")
+(depends-on "elixir-mode")
 
 ;; Requires poppler to work
 (depends-on "pdf-tools")

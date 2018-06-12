@@ -101,7 +101,7 @@ to the current branch. Uses Magit."
     (let* ((remote (match-string-no-properties 1 remote-url))
            (app-name (match-string-no-properties 2 remote-url))
            (current-branch (magit-get-current-branch))
-           (tracked-remote-and-branch (split-string (magit-get-tracked-branch) "/"))
+           (tracked-remote-and-branch (split-string (magit-get-upstream-branch) "/"))
            (tracked-remote (nth 0 tracked-remote-and-branch))
            (tracked-branch (nth 1 tracked-remote-and-branch)))
 

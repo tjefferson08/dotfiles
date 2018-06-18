@@ -257,6 +257,7 @@
 ;;         regexp-search-ring))
 
 ;; alists
+(add-hook 'web-mode-hook 'prettier-js-mode)
 (add-to-list 'mc/cursor-specific-vars 'iy-go-to-char-start-pos)
 (add-to-list 'auto-mode-alist '("\\.gitconfig$" . conf-mode))
 (add-to-list 'auto-mode-alist '("\\.latex\\'" . latex-mode))

@@ -12,3 +12,5 @@ fi
 function title {
     echo -ne "\033]0;"$*"\007"
 }
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

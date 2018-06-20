@@ -258,6 +258,11 @@
 
 ;; alists
 (add-hook 'web-mode-hook 'prettier-js-mode)
+(setq-default flycheck-disabled-checkers (append flycheck-disabled-checkers '(json-jsonlist)))
+;; disable jshint since we prefer eslint checking
+(setq-default flycheck-disabled-checkers (append flycheck-disabled-checkers '(javascript-jshint)))
+;; use eslint with web-mode for jsx files
+(flycheck-add-mode 'javascript-eslint 'web-mode)
 (add-to-list 'mc/cursor-specific-vars 'iy-go-to-char-start-pos)
 (add-to-list 'auto-mode-alist '("\\.gitconfig$" . conf-mode))
 (add-to-list 'auto-mode-alist '("\\.latex\\'" . latex-mode))

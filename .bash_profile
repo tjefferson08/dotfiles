@@ -7,6 +7,7 @@ export CAPYBARA_CHROME_BINARY="/Applications/Google Chrome.app/Contents/MacOS/Go
 export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
 export EDITOR="emacsclient -c"
+export ERL_AFLAGS="-kernel shell_history enabled"
 
 if [ -f ~/.bashrc ]; then
    source ~/.bashrc

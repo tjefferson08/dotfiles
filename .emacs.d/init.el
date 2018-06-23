@@ -157,6 +157,7 @@
 (load "~/.emacs.d/init-yaml.el")
 (load "~/.emacs.d/init-ruby.el")
 (load "~/.emacs.d/init-org.el")
+(load "~/.emacs.d/init-web.el")
 (load "~/.emacs.d/hydras.el")
 (load "~/.emacs.d/macros.el")
 (load "~/.emacs.d/monokai-theme.el")

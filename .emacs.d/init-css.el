@@ -6,3 +6,4 @@
   (subword-mode))
 
 (add-hook 'css-mode-hook 'my-css-mode-hook)
+(add-hook 'css-mode-hook 'prettier-js-mode)

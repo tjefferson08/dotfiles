@@ -93,7 +93,13 @@
        (quote postgres))
       (sql-user "metro")
       (sql-database "metro")
-      (sql-server "localhost")))))
+      (sql-server "localhost"))
+     ("secretshopper_dev"
+      (sql-product
+       (quote postgres))
+      (sql-user "travis")
+      (sql-database "secretshopper_dev")
+      (sql-server "")))))
  '(uniquify-buffer-name-style (quote forward) nil (uniquify))
  '(uniquify-strip-common-suffix t)
  '(vc-annotate-background nil)

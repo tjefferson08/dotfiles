@@ -40,3 +40,5 @@ if [ -f "$HOME/str_aliases" ]; then source "$HOME/str_aliases"; fi
 . $HOME/.asdf/completions/asdf.bash
 
 source /usr/local/opt/asdf/asdf.sh
+
+export PATH="$HOME/.cargo/bin:$PATH"

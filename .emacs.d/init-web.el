@@ -12,6 +12,7 @@
   (setq web-mode-css-indent-offset 2)
   (setq web-mode-code-indent-offset 2)
   (setq js-indent-level 2)
+  (yas-minor-mode-on)
   (flycheck-mode 1))
 
 (add-hook 'web-mode-hook 'prettier-js-mode)

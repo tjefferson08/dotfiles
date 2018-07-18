@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: react-functional-component
+# key: rfc
+# --
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const ${1:ComponentName} = ({ $2 }) => {
+  return <div>Hello, World!</div>;$0
+}
+
+$1.propTypes = {};
+
+export default $1;

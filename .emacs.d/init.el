@@ -118,6 +118,8 @@
      (340 . "#2790C3")
      (360 . "#66D9EF"))))
  '(vc-annotate-very-old-color nil)
+ '(web-mode-css-indent-offset 2)
+ '(web-mode-markup-indent-offset 2)
  '(weechat-color-list
    (unspecified "#272822" "#49483E" "#A20C41" "#F92672" "#67930F" "#A6E22E" "#968B26" "#E6DB74" "#21889B" "#66D9EF" "#A41F99" "#FD5FF0" "#349B8D" "#A1EFE4" "#F8F8F2" "#F8F8F0")))
 
@@ -158,6 +160,8 @@
 (load "~/.emacs.d/init-ruby.el")
 (load "~/.emacs.d/init-org.el")
 (load "~/.emacs.d/init-web.el")
+(load "~/.emacs.d/init-css.el")
+(load "~/.emacs.d/init-elixir.el")
 (load "~/.emacs.d/hydras.el")
 (load "~/.emacs.d/macros.el")
 (load "~/.emacs.d/monokai-theme.el")

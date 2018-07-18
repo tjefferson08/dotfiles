@@ -34,3 +34,9 @@ alias gup='git pull && git submodule update --init'
 alias rkdbm='rake db:migrate db:test:prepare'
 
 if [ -f "$HOME/str_aliases" ]; then source "$HOME/str_aliases"; fi
+
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash
+
+source /usr/local/opt/asdf/asdf.sh

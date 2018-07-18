@@ -6,10 +6,11 @@
       (require 'yasnippet)
       (require 'company)
       (require 'prettier-js)
+
       (setq prettier-js-args '("--single-quote=true"))
       (interactive)
-      ;; (flycheck-select-checker 'javascript-eslint)
-      ;; (flycheck-mode 1)
+      (flycheck-select-checker 'javascript-eslint)
+      (flycheck-mode 1)
       (helm-dash-activate-docset "Javascript")
       (helm-dash-activate-docset "NodeJS")
       (helm-dash-activate-docset "React")

@@ -1,12 +1,13 @@
-
 (source melpa)
 (source gnu)
+
 (depends-on "smart-mode-line")
 (depends-on "diminish")
 (depends-on "popup")
 (depends-on "key-chord")
 (depends-on "js2-mode")
 (depends-on "js-doc")
+(depends-on "react-snippets")
 (depends-on "iy-go-to-char")
 (depends-on "expand-region")
 (depends-on "multiple-cursors")

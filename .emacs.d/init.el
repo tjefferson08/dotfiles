@@ -65,7 +65,8 @@
  '(prettier-args (quote ("--single-quote=true")))
  '(prettier-command "prettier")
  '(projectile-completion-system (quote helm))
- '(projectile-global-mode t)
+ '(projectile-mode t)
+ '(projectile-mode t nil (projectile))
  '(projectile-verbose t)
  '(safe-local-variable-values (quote ((encoding . utf-8))))
  '(sml/replacer-regexp-list

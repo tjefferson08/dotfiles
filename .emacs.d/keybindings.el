@@ -19,6 +19,7 @@
 (require 'dockerfile-mode)
 (require 'move-text)
 (require 'compile)
+(require 'projectile)
 
 (global-set-key "\C-x\C-m" 'helm-M-x)
 (global-set-key "\C-x\m" 'helm-M-x)

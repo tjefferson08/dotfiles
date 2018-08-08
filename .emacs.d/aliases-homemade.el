@@ -1,6 +1,7 @@
 (require 's)
 (require 'popup)
 (require 'helm)
+(require 'projectile)
 ;;(require 'helm-dash)
 
 ;;;; Aliases

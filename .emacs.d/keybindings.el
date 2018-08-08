@@ -74,6 +74,10 @@
 (global-set-key (kbd "C-x C-b") 'helm-mini)
 (global-set-key (kbd "C-;") 'helm-mini)
 
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c C-p") 'projectile-command-map)
+
+
 (if (not (window-system))
     (progn
       (global-set-key (kbd "C-[ [ s;") 'helm-mini)
@@ -117,6 +121,7 @@
 
 (define-key js2-mode-map (kbd "C-c i") 'js-doc-insert-function-doc)
 (define-key js2-mode-map (kbd "C-c n") 'js2-next-error)
+(define-key js2-mode-map (kbd "M-.") 'xref-find-definitions)
 (define-key js2-mode-map (kbd "C-c C-t") (lambda () (interactive) (nodeunit-run-test-at-point)))
 (define-key js2-mode-map (kbd "C-c t") (lambda () (interactive) (nodeunit-run-test-at-point)))
 (define-key js2-mode-map (kbd "C-c f") (lambda () (interactive) (nodeunit-run-test-file)))

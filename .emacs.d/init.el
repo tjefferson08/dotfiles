@@ -64,9 +64,6 @@
  '(pos-tip-foreground-color "#272822")
  '(prettier-args (quote ("--single-quote=true")))
  '(prettier-command "prettier")
- '(projectile-completion-system (quote helm))
- '(projectile-mode t nil (projectile))
- '(projectile-verbose t)
  '(safe-local-variable-values (quote ((encoding . utf-8))))
  '(sml/replacer-regexp-list
    (quote

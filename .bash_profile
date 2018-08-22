@@ -42,3 +42,5 @@ if [ -f "$HOME/str_aliases" ]; then source "$HOME/str_aliases"; fi
 source /usr/local/opt/asdf/asdf.sh
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+export PATH="$PATH:$(yarn global bin)"

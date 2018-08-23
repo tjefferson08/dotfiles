@@ -94,6 +94,7 @@
 (require 'diminish) ;; remove/shorten pesky minor modes in modeline
 (diminish 'abbrev-mode)
 
+;; (setq helm-dash-browser-func 'browse-url)
 (setq helm-dash-browser-func 'eww)
 
 ;; starts emacsclient fullscreen

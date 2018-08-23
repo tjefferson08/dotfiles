@@ -57,7 +57,6 @@
 (depends-on "prettier-js")
 (depends-on "rjsx-mode")
 (depends-on "elixir-mode")
-<<<<<<< Updated upstream
 (depends-on "flycheck-flow")
 (depends-on "reason-mode")
 (depends-on "elm-mode")

@@ -96,6 +96,12 @@
        (quote postgres))
       (sql-user "travis")
       (sql-database "secretshopper_dev")
+      (sql-server ""))
+     ("mpt_dev"
+      (sql-product
+       (quote mysql))
+      (sql-user "root")
+      (sql-database "media_planning_development")
       (sql-server "")))))
  '(uniquify-buffer-name-style (quote forward) nil (uniquify))
  '(uniquify-strip-common-suffix t)
@@ -157,7 +163,7 @@
 (load "~/.emacs.d/aliases-homemade.el")
 (load "~/.emacs.d/keybindings.el")
 (load "~/.emacs.d/init-javascript.el")
-(load "~/.emacs.d/init-typescript.el")
+;; (load "~/.emacs.d/init-typescript.el")
 (load "~/.emacs.d/init-coffeescript.el")
 (load "~/.emacs.d/init-haml.el")
 (load "~/.emacs.d/init-yaml.el")
@@ -255,7 +261,8 @@
 
 (add-hook 'helm-minibuffer-set-up-hook 'helm-hide-minibuffer-maybe)
 (add-hook 'makefile-mode-hook 'my-makefile-hook)
-
+(global-subword-mode)
+(global-company-mode)
 ;; persist history of search and kill ring(s) across sessions
 ;; (setq savehist-file (concat user-emacs-directory "savehist"))
 ;; (savehist-mode 1)

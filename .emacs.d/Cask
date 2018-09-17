@@ -61,6 +61,7 @@
 (depends-on "reason-mode")
 (depends-on "elm-mode")
 (depends-on "tide")
+(depends-on "typescript-mode")
 
 ;; (depends-on "lsp-mode")
 ;; (depends-on "lsp-ui")

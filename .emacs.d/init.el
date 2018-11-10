@@ -299,6 +299,11 @@
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 (add-to-list 'comint-output-filter-functions 'ansi-color-process-output)
 
+(defun my-reason-mode-hook ()
+  (add-hook 'before-save-hook 'refmt-before-save))
+
+(add-hook 'reason-mode-hook 'my-reason-mode-hook)
+
 
 (defun my-sml-mode-hook()
   ;; disable abbrev-mode

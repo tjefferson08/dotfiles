@@ -32,6 +32,7 @@ eval "$(rbenv init -)"
 
 alias gup='git pull && git submodule update --init'
 alias rkdbm='rake db:migrate db:test:prepare'
+alias spacemacs="HOME=~/spacemacs open -a /Applications/Emacs.app"
 
 if [ -f "$HOME/str_aliases" ]; then source "$HOME/str_aliases"; fi
 

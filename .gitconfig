@@ -4,5 +4,6 @@
         l = log --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -n 10
 
 [user]
-        email = traviscjefferson@gmail.com
+	email = tjefferson@sharethrough.com
         name = Travis Jefferson
+	emal = tjefferson@sharethrough.com

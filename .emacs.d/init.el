@@ -163,7 +163,7 @@
 (load "~/.emacs.d/aliases-homemade.el")
 (load "~/.emacs.d/keybindings.el")
 (load "~/.emacs.d/init-javascript.el")
-;; (load "~/.emacs.d/init-typescript.el")
+(load "~/.emacs.d/init-typescript.el")
 (load "~/.emacs.d/init-coffeescript.el")
 (load "~/.emacs.d/init-haml.el")
 (load "~/.emacs.d/init-yaml.el")

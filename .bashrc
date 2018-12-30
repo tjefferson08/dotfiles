@@ -15,9 +15,6 @@ function title {
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-# added by travis gem
-[ -f /Users/travis/.travis/travis.sh ] && source /Users/travis/.travis/travis.sh
-
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [ -f /Users/travis/.config/yarn/global/node_modules/tabtab/.completions/serverless.bash ] && . /Users/travis/.config/yarn/global/node_modules/tabtab/.completions/serverless.bash

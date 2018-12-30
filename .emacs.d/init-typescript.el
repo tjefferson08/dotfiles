@@ -13,6 +13,8 @@
   ;; company is an optional dependency. You have to
   ;; install it separately via package-install
   ;; `M-x package-install [ret] company`
+  (setq typescript-indent-level 2)
+  (prettier-js-mode)
   (company-mode +1))
 
 ;; aligns annotation to the right hand side

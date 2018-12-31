@@ -30,6 +30,86 @@ Need with-eval-after-load form to ensure we use spacemacs versioon of org-mode,
 not old version that ships with emacs
 #+BEGIN_SRC emacs-lisp
   (with-eval-after-load 'org
-      ;; TODO: add config
-  )  
+    (setq org-src-fontify-natively t)
+
+    (org-babel-do-load-languages
+     'org-babel-load-languages
+     '((C . t) (ruby . t) (js . t) (scheme . t)))) 
+#+END_SRC
+* aliases for easier M-x'ing
+#+BEGIN_SRC emacs-lisp
+  (defalias 'eb 'eval-buffer)
+  (defalias 'gho (lambda () (interactive) (github-link "tjefferson08" nil)))
+  (defalias 'ghu (lambda () (interactive) (github-link nil nil)))
+  (defalias 'rb 'revert-buffer)
+  (defalias 'ttl 'toggle-truncate-lines)
+#+END_SRC
+
+* magit/github custom commands and helpers
+#+BEGIN_SRC emacs-lisp
+  ;; requires current branch to track from PR target branch, and when
+  ;; you push your local, you need to push to origin, otherwise it'll
+  ;; push up to the tracked remote (upstream) by default, and we don't
+  ;; want to pollute with a bunch of PR branches
+  (defun pull-request-url ()
+    "Build the URL for the pull request on GitHub corresponding
+  to the current branch. Uses Magit."
+    (interactive)
+    (let* ((extract-app-and-remote-re ".*github.com[:/]\\(.*\\)/\\(.*\\)")
+           (full-remote-url (magit-get "remote" (magit-get-remote) "url"))
+           (remote-url (if (s-suffix? ".git" full-remote-url)
+                           (substring full-remote-url 0 -4)
+                         full-remote-url)))
+      (string-match extract-app-and-remote-re remote-url 0)
+      (message extract-app-and-remote-re full-remote-url remote-url)
+      (let* ((remote (match-string-no-properties 1 remote-url))
+             (app-name (match-string-no-properties 2 remote-url))
+             (current-branch (magit-get-current-branch))
+             (tracked-remote-and-branch (split-string (magit-get-upstream-branch) "/"))
+             (tracked-remote (nth 0 tracked-remote-and-branch))
+             (tracked-branch (nth 1 tracked-remote-and-branch)))
+
+        (let ((url (format "https://github.com/%s/%s/compare/%s...%s:%s"
+                           remote
+                           app-name
+                           tracked-branch
+                           (if (string-equal tracked-remote "origin")
+                             remote
+                             "tjefferson08")
+                           current-branch)))
+          (message url)
+          (kill-new url)
+          (browse-url url)))))
+
+  (defun github-link (remote branch)
+    "Link to current line on github.com"
+    (interactive)
+
+    (if (eq branch nil)
+        (setq branch "master"))
+
+    ;; git@github.com:signpost/core.git/tree/master/apps/API.js#L250
+    (let* ((remote-url (magit-get "remote" (magit-get-remote) "url"))
+           (remote-name (progn
+                          (string-match "github\\.com[:/]\\([-_a-z0-9]+\\)" remote-url)
+                          (match-string 1 remote-url)))
+
+           (app-name (progn
+                       (string-match "[/]\\([-_a-z0-9]+\\)\\(?:\\.git\\)?$" remote-url)
+                       (match-string 1 remote-url)))
+           (target-url (concat
+                        "https://github.com/"
+                        (or remote-name "signpost")
+                        "/"
+                        app-name
+                        "/tree/"
+                        branch
+                        "/"
+                        (file-relative-name (buffer-file-name) (projectile-project-root))
+                        "#L"
+                        (int-to-string (line-number-at-pos)))))
+      (message target-url)
+      (browse-url target-url)
+      (kill-new target-url)))
+
 #+END_SRC

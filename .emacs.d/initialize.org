@@ -20,3 +20,7 @@
 #+BEGIN_SRC emacs-lisp
   (setq typescript-indent-level 2)
 #+END_SRC
+* projectile config
+#+BEGIN_SRC emacs-lisp
+  (setq projectile-switch-project-action 'magit-status)
+#+END_SRC

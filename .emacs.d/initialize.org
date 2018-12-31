@@ -24,3 +24,12 @@
 #+BEGIN_SRC emacs-lisp
   (setq projectile-switch-project-action 'magit-status)
 #+END_SRC
+
+* org config
+Need with-eval-after-load form to ensure we use spacemacs versioon of org-mode,
+not old version that ships with emacs
+#+BEGIN_SRC emacs-lisp
+  (with-eval-after-load
+      ;; TODO: add config
+  )  
+#+END_SRC

@@ -1,0 +1,22 @@
+#+STARTUP: overview
+* Appearance/windows/gui
+#+BEGIN_SRC emacs-lisp
+  (setq confirm-kill-emacs 'y-or-n-p)
+
+  ;; no extra frame for ediff control buffer
+  (setq ediff-window-setup-function 'ediff-setup-windows-plain)
+
+  (defun set-truncate-lines ()
+    (toggle-truncate-lines 1))
+
+  (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+  (add-hook 'prog-mode-hook 'set-truncate-lines)
+
+  (add-hook 'fundamental-mode-hook 'set-truncate-lines)
+
+#+END_SRC 
+
+* Typescript
+#+BEGIN_SRC emacs-lisp
+  (setq typescript-indent-level 2)
+#+END_SRC

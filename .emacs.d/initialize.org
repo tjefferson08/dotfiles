@@ -32,6 +32,13 @@ not old version that ships with emacs
   (with-eval-after-load 'org
     (setq org-src-fontify-natively t)
 
+    (setq org-capture-templates
+          '(("t" "Todo" entry (file+headline "/Users/travis/Dropbox/org/index.org" "Tasks")
+             "* TODO %?\n  %i\n  %a")
+            ("j" "Journal" entry (file+datetree "/Users/travis/Dropbox/org/journal.org")
+             "* %?\nEntered on %U\n  %i\n  %a")))
+
+
     (org-babel-do-load-languages
      'org-babel-load-languages
      '((C . t) (ruby . t) (js . t) (scheme . t)))) 

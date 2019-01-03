@@ -35,8 +35,12 @@ not old version that ships with emacs
     (setq org-capture-templates
           '(("t" "Todo" entry (file+headline "/Users/travis/Dropbox/org/index.org" "Tasks")
              "* TODO %?\n  %i\n  %a")
+            ("w" "Todo for work" entry (file+headline "/Users/travis/Dropbox/org/work.org" "Tasks")
+             "* TODO %?\n  %i\n  %a")
+            ("1" "1 on 1 meeting" entry (file+olp+datetree "/Users/travis/Dropbox/org/work.org" "1on1s")
+             "* %?\n Action Items:")
             ("j" "Journal" entry (file+datetree "/Users/travis/Dropbox/org/journal.org")
-             "* %?\nEntered on %U\n  %i\n  %a")))
+             "* %?nEntered on %U\n  %i\n  %a")))
 
 
     (org-babel-do-load-languages

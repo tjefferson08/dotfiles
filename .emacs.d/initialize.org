@@ -1,4 +1,6 @@
 #+STARTUP: overview
+#+PROPERTY: header-args :results silent
+
 * Appearance/windows/gui
 #+BEGIN_SRC emacs-lisp
   (setq confirm-kill-emacs 'y-or-n-p)
@@ -34,19 +36,20 @@ not old version that ships with emacs
 
     (setq org-capture-templates
           '(("t" "Todo" entry (file+headline "/Users/travis/Dropbox/org/index.org" "Tasks")
-             "* TODO %?\n  %i\n  %a")
+             "* TODO %?\n  %i\n")
             ("w" "Todo for work" entry (file+headline "/Users/travis/Dropbox/org/work.org" "Tasks")
-             "* TODO %?\n  %i\n  %a")
+             "* TODO %?\n  %i\n")
             ("1" "1 on 1 meeting" entry (file+olp+datetree "/Users/travis/Dropbox/org/work.org" "1on1s")
-             "* %?\n Action Items:")
+             "* %?\n Action Items:\n")
             ("j" "Journal" entry (file+datetree "/Users/travis/Dropbox/org/journal.org")
-             "* %?nEntered on %U\n  %i\n  %a")))
+             "* %?\nEntered on %U\n  %i\n")))
 
 
     (org-babel-do-load-languages
      'org-babel-load-languages
-     '((C . t) (ruby . t) (js . t) (scheme . t)))) 
+     '((C . t) (ruby . t) (js . t) (scheme . t) (emacs-lisp . t))))
 #+END_SRC
+
 * aliases for easier M-x'ing
 #+BEGIN_SRC emacs-lisp
   (defalias 'eb 'eval-buffer)

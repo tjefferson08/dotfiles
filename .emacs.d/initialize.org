@@ -15,8 +15,9 @@
   (add-hook 'prog-mode-hook 'set-truncate-lines)
 
   (add-hook 'fundamental-mode-hook 'set-truncate-lines)
-
-#+END_SRC 
+  (setq dotspacemacs-whitespace-cleanup 'all)
+  (global-spacemacs-whitespace-cleanup-mode)
+#+END_SRC
 
 * Typescript
 #+BEGIN_SRC emacs-lisp
@@ -38,9 +39,9 @@ not old version that ships with emacs
 
     (setq org-capture-templates
           '(("t" "Todo" entry (file+headline "/Users/travis/Dropbox/org/index.org" "Tasks")
-             "* TODO %?\n  %i\n")
+             "* TODO %?\n  %i\n\n")
             ("w" "Todo for work" entry (file+headline "/Users/travis/Dropbox/org/work.org" "Tasks")
-             "* TODO %?\n  %i\n")
+             "* TODO %?\n  %i\n\n")
             ("1" "1 on 1 meeting" entry (file+olp+datetree "/Users/travis/Dropbox/org/work.org" "1on1s")
              "* %?\n Action Items:\n")
             ("s" "standup" entry (file+olp+datetree "/Users/travis/Dropbox/org/work.org" "standups")

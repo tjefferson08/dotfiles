@@ -1,5 +1,6 @@
 #+STARTUP: overview
 #+PROPERTY: header-args :results silent
+
 * Appearance/windows/gui
 #+BEGIN_SRC emacs-lisp
   (setq confirm-kill-emacs 'y-or-n-p)
@@ -34,6 +35,8 @@ not old version that ships with emacs
 
 #+BEGIN_SRC emacs-lisp
   (with-eval-after-load 'org
+    ;; `org-tempo' provides template expansion like <s <TAB> for source blocks
+    (require 'org-tempo)
     (setq org-src-fontify-natively t
           org-capture-templates
           '(("t" "Todo" entry (file+headline "/Users/travis/Dropbox/org/index.org" "Tasks")

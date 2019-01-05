@@ -1,6 +1,5 @@
 #+STARTUP: overview
 #+PROPERTY: header-args :results silent
-
 * Appearance/windows/gui
 #+BEGIN_SRC emacs-lisp
   (setq confirm-kill-emacs 'y-or-n-p)
@@ -35,9 +34,8 @@ not old version that ships with emacs
 
 #+BEGIN_SRC emacs-lisp
   (with-eval-after-load 'org
-    (setq org-src-fontify-natively t)
-
-    (setq org-capture-templates
+    (setq org-src-fontify-natively t
+          org-capture-templates
           '(("t" "Todo" entry (file+headline "/Users/travis/Dropbox/org/index.org" "Tasks")
              "* TODO %?\n  %i\n\n")
             ("w" "Todo for work" entry (file+headline "/Users/travis/Dropbox/org/work.org" "Tasks")
@@ -47,7 +45,8 @@ not old version that ships with emacs
             ("s" "standup" entry (file+olp+datetree "/Users/travis/Dropbox/org/work.org" "standups")
              "* Yesterday\n - %?\n\n* Today\n - \n\n")
             ("j" "Journal" entry (file+datetree "/Users/travis/Dropbox/org/journal.org")
-             "* %?\nEntered on %U\n  %i\n")))
+             "* %?\nEntered on %U\n  %i\n"))
+          org-agenda-files (list "/Users/travis/Dropbox/org"))
 
     (org-babel-do-load-languages
      'org-babel-load-languages

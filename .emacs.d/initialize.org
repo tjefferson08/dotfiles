@@ -151,3 +151,9 @@ not old version that ships with emacs
   (setq send­mail­function 'smtpmail­send­it)
   (setq message­send­mail­function 'smtpmail­send­it)
 #+END_SRC
+* JS config
+  #+begin_src emacs-lisp
+    (setq js-indent-level 2)
+    (add-to-list 'spacemacs--prettier-modes 'javascript-mode)
+    (add-to-list 'spacemacs--prettier-modes 'typescript-mode)
+  #+end_src

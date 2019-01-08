@@ -41,14 +41,17 @@ not old version that ships with emacs
           org-capture-templates
           '(("t" "Todo" entry (file+headline "/Users/travis/Dropbox/org/index.org" "Tasks")
              "* TODO %?\n  %i\n\n")
-            ("w" "Todo for work" entry (file+headline "/Users/travis/Dropbox/org/work.org" "Tasks")
+            ("p" "Todo for work" entry (file+headline "/Users/travis/Dropbox/org/work.org" "Tasks")
              "* TODO %?\n  %i\n\n")
             ("1" "1 on 1 meeting" entry (file+olp+datetree "/Users/travis/Dropbox/org/work.org" "1on1s")
              "* %?\n Action Items:\n")
             ("s" "standup" entry (file+olp+datetree "/Users/travis/Dropbox/org/work.org" "standups")
              "* Yesterday\n - %?\n\n* Today\n - \n\n")
-            ("j" "Journal" entry (file+datetree "/Users/travis/Dropbox/org/journal.org")
-             "* %?\nEntered on %U\n  %i\n"))
+            ("w" "Workout" plain
+             (file+olp+datetree "/Users/travis/Dropbox/org/index.org" "Workouts")
+             (file "/Users/travis/Dropbox/org/workout-template.org")
+             :empty-lines 1)
+            ("j" "Journal" entry (file+datetree "/Users/travis/Dropbox/org/journal.org")))
           org-agenda-files (list "/Users/travis/Dropbox/org"))
 
     (org-babel-do-load-languages

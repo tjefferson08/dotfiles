@@ -39,19 +39,22 @@ not old version that ships with emacs
     (require 'org-tempo)
     (setq org-src-fontify-natively t
           org-capture-templates
-          '(("t" "Todo" entry (file+headline "/Users/travis/Dropbox/org/index.org" "Tasks")
+          '(
+            ("s" "Sharethrough/work-related capture")
+            ("st" "Todo for work" entry (file+headline "/Users/travis/Dropbox/org/work.org" "Tasks")
              "* TODO %?\n  %i\n\n")
-            ("p" "Todo for work" entry (file+headline "/Users/travis/Dropbox/org/work.org" "Tasks")
-             "* TODO %?\n  %i\n\n")
-            ("1" "1 on 1 meeting" entry (file+olp+datetree "/Users/travis/Dropbox/org/work.org" "1on1s")
+            ("s1" "1 on 1 meeting" entry (file+olp+datetree "/Users/travis/Dropbox/org/work.org" "1on1s")
              "* %?\n Action Items:\n")
-            ("s" "standup" entry (file+olp+datetree "/Users/travis/Dropbox/org/work.org" "standups")
+            ("ss" "standup" entry (file+olp+datetree "/Users/travis/Dropbox/org/work.org" "standups")
              "* Yesterday\n - %?\n\n* Today\n - \n\n")
+            ("t" "Todo" entry (file+headline "/Users/travis/Dropbox/org/index.org" "Tasks")
+             "* TODO %?\n  %i\n\n")
             ("w" "Workout" plain
              (file+olp+datetree "/Users/travis/Dropbox/org/index.org" "Workouts")
              (file "/Users/travis/Dropbox/org/workout-template.org")
              :empty-lines 1)
-            ("j" "Journal" entry (file+datetree "/Users/travis/Dropbox/org/journal.org")))
+            ("j" "Journal" plain (file+olp+datetree "/Users/travis/Dropbox/org/journal.org")
+             "%?\n%i\nEntered on %U\n" :empty-lines 1))
           org-agenda-files (list "/Users/travis/Dropbox/org"))
 
     (org-babel-do-load-languages

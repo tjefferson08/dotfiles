@@ -1,6 +1,9 @@
 #+STARTUP: overview
 #+PROPERTY: header-args :results silent
-
+* global keybindings (minimize!)
+  #+begin_src emacs-lisp
+    (global-set-key (kbd "C-;") 'helm-mini)
+  #+end_src
 * Appearance/windows/gui
 #+BEGIN_SRC emacs-lisp
   (setq confirm-kill-emacs 'y-or-n-p)

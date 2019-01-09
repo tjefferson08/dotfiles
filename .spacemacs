@@ -53,7 +53,7 @@ values."
      emoji
      ;; markdown
      terraform
-     org
+     (org :variables org-enable-reveal-js-support t)
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)

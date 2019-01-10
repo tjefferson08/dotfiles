@@ -1,11 +1,16 @@
 #+STARTUP: overview
 #+PROPERTY: header-args :results silent
+
 * global keybindings (minimize!)
   #+begin_src emacs-lisp
     (global-set-key (kbd "C-;") 'helm-mini)
 
     ;; Easier undo-in-region
     (define-key evil-visual-state-map (kbd "u") 'undo)
+  #+end_src
+* disable smartparens/auto-pairs by default
+  #+begin_src emacs-lisp
+    (remove-hook 'prog-mode-hook #'smartparens-mode)
   #+end_src
 * Appearance/windows/gui
 #+BEGIN_SRC emacs-lisp

@@ -48,6 +48,11 @@ not old version that ships with emacs
   (with-eval-after-load 'org
     ;; `org-tempo' provides template expansion like <s <TAB> for source blocks
     (require 'org-tempo)
+
+    (defun disable-company-mode()
+      (company-mode -1))
+    (add-hook 'org-mode-hook 'disable-company-mode)
+
     (setq org-src-fontify-natively t
           org-capture-templates
           '(
@@ -172,5 +177,11 @@ not old version that ships with emacs
   #+begin_src emacs-lisp
     (setq js-indent-level 2)
     (add-to-list 'spacemacs--prettier-modes 'javascript-mode)
+    (add-hook 'javascript-mode-hook 'prettier-js-mode)
+
     (add-to-list 'spacemacs--prettier-modes 'typescript-mode)
+    (add-hook 'typescript-mode-hook 'prettier-js-mode)
+
+    (add-to-list 'spacemacs--prettier-modes 'rjsx-mode)
+    (add-hook 'rjsx-mode-hook 'prettier-js-mode)
   #+end_src

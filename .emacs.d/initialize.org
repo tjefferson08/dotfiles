@@ -10,14 +10,14 @@
   #+end_src
 * surround: swap open/close space/no space behavior
   #+begin_src emacs-lisp
-    (evil-add-to-alist
+    (with-eval-after-load 'evil-surround (evil-add-to-alist
      'evil-surround-pairs-alist
      ?\( '("(" . ")")
      ?\[ '("[" . "]")
      ?\{ '("{" . "}")
      ?\) '("( " . " )")
      ?\] '("[ " . " ]")
-    ?\} '("{ " . " }")
+    ?\} '("{ " . " }")))
   #+end_src
 * disable smartparens/auto-pairs by default
   #+begin_src emacs-lisp

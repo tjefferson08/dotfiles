@@ -24,6 +24,8 @@ if [ -f '/Users/travis/google-cloud-sdk/completion.bash.inc' ]; then source '/Us
 
 if [ -f "$HOME/git-completion.bash" ]; then source "$HOME/git-completion.bash"; fi
 
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
 export NVM_DIR="$HOME/.nvm"
   . "/usr/local/opt/nvm/nvm.sh"
 # source /usr/local/etc/bash_completion
@@ -45,3 +47,10 @@ source /usr/local/opt/asdf/asdf.sh
 export PATH="$HOME/.cargo/bin:$PATH"
 
 export PATH="$PATH:$(yarn global bin)"
+
+# default java version is 1.8
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export MAVEN_REALM='Artifactory Realm'
+export MAVEN_HOST='sharethrough.jfrog.io'
+export MAVEN_USER='deployer'
+export MAVEN_PASSWORD='SroTIGdn9G'

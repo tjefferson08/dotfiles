@@ -1,9 +1,8 @@
 [alias]
-        st = status
-        co = checkout
-        l = log --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -n 10
+				st = status
+				co = checkout
+				l = log --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -n 10
 
 [user]
 	email = tjefferson@sharethrough.com
-        name = Travis Jefferson
-	emal = tjefferson@sharethrough.com
+	name = Travis Jefferson

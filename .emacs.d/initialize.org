@@ -74,6 +74,8 @@ not old version that ships with emacs
              "* %?\n Action Items:\n")
             ("ss" "standup" entry (file+olp+datetree "/Users/travis/Dropbox/org/work.org" "standups")
              "* Yesterday\n - %?\n\n* Today\n - \n\n")
+            ("b" "Blood pressure" table-line (file+headline "/Users/travis/Dropbox/org/index.org" "Blood pressure")
+             "| %U | %? | | |\n")
             ("t" "Todo" entry (file+headline "/Users/travis/Dropbox/org/index.org" "Tasks")
              "* TODO %?\n  %i\n\n")
             ("w" "Workout" plain

@@ -52,7 +52,6 @@ values."
      ruby
      javascript
      gnus
-     typescript
      helm
      auto-completion
      better-defaults
@@ -62,6 +61,7 @@ values."
      emoji
      ;; markdown
      terraform
+     (typescript :variables tide-node-executable "/Users/travis/.asdf/installs/nodejs/8.11.3/bin/node")
      (org :variables org-enable-reveal-js-support t)
      (shell :variables
             shell-default-height 30

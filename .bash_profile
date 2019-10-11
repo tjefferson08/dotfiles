@@ -38,11 +38,9 @@ alias spacemacs='HOME=~/spacemacs open -a /Applications/Emacs.app/'
 
 if [ -f "$HOME/str_aliases" ]; then source "$HOME/str_aliases"; fi
 
-. $HOME/.asdf/asdf.sh
-
-. $HOME/.asdf/completions/asdf.bash
-
-source /usr/local/opt/asdf/asdf.sh
+# . $HOME/.asdf/asdf.sh
+# . $HOME/.asdf/completions/asdf.bash
+# source /usr/local/opt/asdf/asdf.sh
 
 export PATH="$HOME/.cargo/bin:$PATH"
 

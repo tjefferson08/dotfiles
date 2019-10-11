@@ -62,7 +62,9 @@ values."
      ;; markdown
      terraform
      (typescript :variables tide-node-executable "/Users/travis/.asdf/installs/nodejs/8.11.3/bin/node")
-     (org :variables org-enable-reveal-js-support t)
+     (org :variables
+          org-enable-github-support t
+          org-enable-reveal-js-support t)
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
@@ -78,7 +80,7 @@ values."
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '()
+   dotspacemacs-excluded-packages '(smartparens)
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
    ;; `used-only' installs only explicitly used packages and uninstall any

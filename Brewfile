@@ -63,4 +63,5 @@ cask "spotify"
 cask "vagrant"
 
 mas "taurine", id: 960276676
+mas "Slack", id: 803453959
 mas "Xcode", id: 497799835

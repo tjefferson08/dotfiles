@@ -6,3 +6,5 @@
 [user]
 	email = tjefferson@sharethrough.com
 	name = Travis Jefferson
+[branch]
+	autosetuprebase = always

@@ -21,3 +21,7 @@ function title {
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [ -f /Users/travis/.config/yarn/global/node_modules/tabtab/.completions/sls.bash ] && . /Users/travis/.config/yarn/global/node_modules/tabtab/.completions/sls.bash
+
+if [ -f $(brew --prefix autoenv)/activate.sh ]; then
+    . $(brew --prefix autoenv)/activate.sh
+fi

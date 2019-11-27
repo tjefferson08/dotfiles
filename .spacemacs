@@ -61,7 +61,7 @@ values."
      emoji
      ;; markdown
      terraform
-     (typescript :variables tide-node-executable "/Users/travis/.asdf/installs/nodejs/8.11.3/bin/node")
+     (typescript :variables tide-node-executable "/usr/local/bin/node" typescript-backend 'tide)
      (org :variables
           org-enable-github-support t
           org-enable-reveal-js-support t)

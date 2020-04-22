@@ -37,6 +37,7 @@ values."
      scala
      go
      clojure
+     parinfer
      coffeescript
      dash
      html
@@ -58,6 +59,7 @@ values."
      emacs-lisp
      git
      react
+     reasonml
      emoji
      ;; markdown
      terraform

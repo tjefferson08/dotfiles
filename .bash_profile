@@ -53,3 +53,5 @@ export MAVEN_REALM='Artifactory Realm'
 export MAVEN_HOST='sharethrough.jfrog.io'
 export MAVEN_USER='deployer'
 export MAVEN_PASSWORD='SroTIGdn9G'
+# requires fzf
+alias coauth='printf "Co-authored-by: %s" "$(git log --pretty=format:"%an <%ae>" -1000 | sort | uniq | fzf)" | pbcopy'

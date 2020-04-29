@@ -15,40 +15,27 @@ brew "bash"
 brew "bash-completion"
 brew "bash-git-prompt"
 brew "cask"
-brew "go"
-brew "dep"
-brew "elm"
-brew "ffmpeg"
 brew "fzf"
 brew "git"
 brew "gnupg"
 brew "httpie"
-brew "imagemagick"
 brew "ispell"
 brew "jq"
-brew "mysql@5.6", restart_service: true, link: true, conflicts_with: ["mysql"]
-brew "nvm"
-brew "oath-toolkit"
 brew "packer"
-brew "postgresql", restart_service: true
 brew "ruby-build"
 brew "rbenv"
-brew "redis", restart_service: true
-brew "selenium-server-standalone", restart_service: true
 brew "stow"
 brew "tfenv"
-brew "the_silver_searcher"
 brew "tldr"
 brew "tree"
-brew "watchman"
 brew "yarn"
 brew "heroku/brew/heroku"
-brew "railwaycat/emacsmacport/emacs-mac", args: ["with-imagemagick"], link: false
 
 cask "alfred"
 cask "bettertouchtool"
 cask "chromedriver"
 cask "docker"
+cask "emacs-mac-spacemacs-icon"
 cask "firefox"
 cask "font-fira-code"
 cask "font-input"
@@ -61,6 +48,7 @@ cask "sequel-pro"
 cask "spectacle"
 cask "spotify"
 cask "vagrant"
+
 
 mas "taurine", id: 960276676
 mas "Slack", id: 803453959

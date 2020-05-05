@@ -27,7 +27,9 @@ if [ -f "$HOME/git-completion.bash" ]; then source "$HOME/git-completion.bash"; 
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 export NVM_DIR="$HOME/.nvm"
-  . "/usr/local/opt/nvm/nvm.sh"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 # source /usr/local/etc/bash_completion
 # source <(kubectl completion bash)
 eval "$(rbenv init -)"
@@ -47,11 +49,5 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 export PATH="$PATH:$(yarn global bin)"
 
-# default java version is 1.8
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-export MAVEN_REALM='Artifactory Realm'
-export MAVEN_HOST='sharethrough.jfrog.io'
-export MAVEN_USER='deployer'
-export MAVEN_PASSWORD='SroTIGdn9G'
 # requires fzf
 alias coauth='printf "Co-authored-by: %s" "$(git log --pretty=format:"%an <%ae>" -1000 | sort | uniq | fzf)" | pbcopy'

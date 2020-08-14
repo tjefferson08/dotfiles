@@ -51,3 +51,5 @@ export PATH="$PATH:$(yarn global bin)"
 
 # requires fzf
 alias coauth='printf "Co-authored-by: %s" "$(git log --pretty=format:"%an <%ae>" -1000 | sort | uniq | fzf)" | pbcopy'
+
+alias flushdns="sudo dscacheutil -flushcache"

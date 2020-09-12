@@ -57,7 +57,9 @@ values."
      prettier
      rust
      ruby
-     javascript
+     (javascript :variables javascript-backend 'tern)
+     tern
+
      gnus
      helm
      auto-completion

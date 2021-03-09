@@ -8,12 +8,12 @@ export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
 export EDITOR="emacsclient -c"
 export ERL_AFLAGS="-kernel shell_history enabled"
+export DEBUG_PRINT_LIMIT=20000
 
 if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi
 
-eval "$(rbenv init -)"
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -53,3 +53,18 @@ export PATH="$PATH:$(yarn global bin)"
 alias coauth='printf "Co-authored-by: %s" "$(git log --pretty=format:"%an <%ae>" -1000 | sort | uniq | fzf)" | pbcopy'
 
 alias flushdns="sudo dscacheutil -flushcache"
+
+# 13:35 $ brew install gnu-sed
+# ==> Downloading https://homebrew.bintray.com/bottles/gnu-sed-4.8.catalina.bottle.tar.gz
+# ==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/726be75d6d7155820b408a10e5c1a5ba1406374a7fc167
+# ######################################################################## 100.0%
+# ==> Pouring gnu-sed-4.8.catalina.bottle.tar.gz
+# ==> Caveats
+# GNU "sed" has been installed as "gsed".
+# If you need to use it as "sed", you can add a "gnubin" directory
+# to your PATH from your bashrc like:
+# PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+
+# export PATH="$HOME/.poetry/bin:$PATH"
+
+export PATH="$HOME/.poetry/bin:$PATH"

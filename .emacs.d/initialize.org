@@ -203,6 +203,7 @@ not old version that ships with emacs
 #+END_SRC
 * JS config
   #+begin_src emacs-lisp
+    (message "actually running js config block")
     (defun disable-emmet-mode ()
       (message "disabling emmet-mode")
       (emmet-mode -1))
@@ -212,16 +213,29 @@ not old version that ships with emacs
       (message "disabling smartparens-mode")
       (smartparens-mode -1))
 
+    (defun enable-company-mode ()
+      (interactive)
+      (message "enabling copmany mode")
+      (company-mode 1))
+
     (setq js-indent-level 2)
     (add-to-list 'spacemacs--prettier-modes 'javascript-mode)
     (add-hook 'javascript-mode-hook 'prettier-js-mode)
     (add-hook 'javascript-mode-hook 'disable-emmet-mode)
+    (add-hook 'javascript-mode-hook 'enable-company-mode)
 
     (add-to-list 'spacemacs--prettier-modes 'typescript-mode)
     (add-hook 'typescript-mode-hook 'prettier-js-mode)
     (add-hook 'typescript-mode-hook 'disable-emmet-mode)
+    (add-hook 'typescript-mode-hook 'enable-company-mode)
 
     (add-to-list 'spacemacs--prettier-modes 'rjsx-mode)
     (add-hook 'rjsx-mode-hook 'prettier-js-mode)
     (add-hook 'rjsx-mode-hook 'disable-emmet-mode)
+    (add-hook 'rjsx-mode-hook 'enable-company-mode)
+  #+end_src
+
+* Ruby config
+  #+begin_src emacs-lisp
+    (setq rbenv-installation-dir "/usr/local/bin/rbenv")
   #+end_src

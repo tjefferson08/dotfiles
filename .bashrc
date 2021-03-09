@@ -1,3 +1,5 @@
+if [[ $TERM = dumb ]]; then return; fi
+
 source ~/.bash/aliases.sh
 
 if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then

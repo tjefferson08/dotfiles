@@ -40,7 +40,11 @@ values."
      sql
      scala
      go
-     clojure
+     (clojure :variables
+              clojure-enable-sayid t
+              clojure-enable-clj-refactor t
+              clojure-enable-linters 'clj-kondo)
+
      parinfer
      coffeescript
      dash

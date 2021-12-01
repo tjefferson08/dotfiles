@@ -219,20 +219,22 @@ not old version that ships with emacs
       (company-mode 1))
 
     (setq js-indent-level 2)
-    (add-to-list 'spacemacs--prettier-modes 'javascript-mode)
-    (add-hook 'javascript-mode-hook 'prettier-js-mode)
-    (add-hook 'javascript-mode-hook 'disable-emmet-mode)
-    (add-hook 'javascript-mode-hook 'enable-company-mode)
+    ;; TODO maybe do this with dir-locals
+    (setq js2-strict-missing-semi-warning nil)
+    ;; (add-to-list 'spacemacs--prettier-modes 'javascript-mode)
+    ;; (add-hook 'javascript-mode-hook 'prettier-js-mode)
+    ;; (add-hook 'javascript-mode-hook 'disable-emmet-mode)
+    ;; (add-hook 'javascript-mode-hook 'enable-company-mode)
 
-    (add-to-list 'spacemacs--prettier-modes 'typescript-mode)
-    (add-hook 'typescript-mode-hook 'prettier-js-mode)
-    (add-hook 'typescript-mode-hook 'disable-emmet-mode)
-    (add-hook 'typescript-mode-hook 'enable-company-mode)
+    ;; (add-to-list 'spacemacs--prettier-modes 'typescript-mode)
+    ;; (add-hook 'typescript-mode-hook 'prettier-js-mode)
+    ;; (add-hook 'typescript-mode-hook 'disable-emmet-mode)
+    ;; (add-hook 'typescript-mode-hook 'enable-company-mode)
 
-    (add-to-list 'spacemacs--prettier-modes 'rjsx-mode)
-    (add-hook 'rjsx-mode-hook 'prettier-js-mode)
-    (add-hook 'rjsx-mode-hook 'disable-emmet-mode)
-    (add-hook 'rjsx-mode-hook 'enable-company-mode)
+    ;; (add-to-list 'spacemacs--prettier-modes 'rjsx-mode)
+    ;; (add-hook 'rjsx-mode-hook 'prettier-js-mode)
+    ;; (add-hook 'rjsx-mode-hook 'disable-emmet-mode)
+    ;; (add-hook 'rjsx-mode-hook 'enable-company-mode)
   #+end_src
 
 * Ruby config

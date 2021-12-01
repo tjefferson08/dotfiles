@@ -4,8 +4,6 @@ export HOMEBREW_GITHUB_API_TOKEN=23f6fedb6af8655580a9c466eab780c2dbb79c67
 export PATH="$PATH:./node_modules/.bin"
 export RBENV_ROOT=/usr/local/var/rbenv
 export CAPYBARA_CHROME_BINARY="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-export GOPATH="$HOME/go"
-export PATH="$PATH:$GOPATH/bin"
 export EDITOR="emacsclient -c"
 export ERL_AFLAGS="-kernel shell_history enabled"
 export DEBUG_PRINT_LIMIT=20000
@@ -53,6 +51,8 @@ export PATH="$PATH:$(yarn global bin)"
 alias coauth='printf "Co-authored-by: %s" "$(git log --pretty=format:"%an <%ae>" -1000 | sort | uniq | fzf)" | pbcopy'
 
 alias flushdns="sudo dscacheutil -flushcache"
+alias plan="terraform plan -out=.terraform/plan"
+alias apply="terraform apply .terraform/plan"
 
 # 13:35 $ brew install gnu-sed
 # ==> Downloading https://homebrew.bintray.com/bottles/gnu-sed-4.8.catalina.bottle.tar.gz
@@ -66,5 +66,13 @@ alias flushdns="sudo dscacheutil -flushcache"
 # PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # export PATH="$HOME/.poetry/bin:$PATH"
-
+l
 export PATH="$HOME/.poetry/bin:$PATH"
+
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+# if [ -f "$HOME/workspace/bin/profile" ]; then source "$HOME/workspace/bin/profile" ; fi
+
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOPATH/bin"
+if [ -e /Users/travis/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/travis/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

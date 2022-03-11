@@ -1,5 +1,7 @@
 if [[ $TERM = dumb ]]; then return; fi
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 source ~/.bash/aliases.sh
 
 if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then

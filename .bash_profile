@@ -2,7 +2,7 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 export HOMEBREW_GITHUB_API_TOKEN=23f6fedb6af8655580a9c466eab780c2dbb79c67
 export PATH="$PATH:./node_modules/.bin"
-export RBENV_ROOT=/usr/local/var/rbenv
+# export RBENV_ROOT=/usr/local/var/rbenv
 export EDITOR="emacsclient -c"
 export ERL_AFLAGS="-kernel shell_history enabled"
 export DEBUG_PRINT_LIMIT=20000
@@ -11,7 +11,7 @@ if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi
 
-eval "$(rbenv init -)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/travis/google-cloud-sdk/path.bash.inc' ]; then source '/Users/travis/google-cloud-sdk/path.bash.inc'; fi
@@ -21,7 +21,7 @@ if [ -f '/Users/travis/google-cloud-sdk/completion.bash.inc' ]; then source '/Us
 
 if [ -f "$HOME/git-completion.bash" ]; then source "$HOME/git-completion.bash"; fi
 
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
@@ -29,7 +29,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # source /usr/local/etc/bash_completion
 # source <(kubectl completion bash)
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 alias gup='git pull && git submodule update --init'
 alias rkdbm='rake db:migrate db:test:prepare'

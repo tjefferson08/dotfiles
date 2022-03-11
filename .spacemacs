@@ -33,7 +33,13 @@ values."
    '(restclient
      csv
      sql
-     go
+     (go :variables
+         go-use-testify-for-testing t
+         go-format-before-save t
+         lsp-gopls-build-flags (vector "-tags=unit,integration,wireinject")
+         go-test-command "TZ=America/Denver go test -p 1"
+         gofmt-command "goimports")
+
      (clojure :variables
               clojure-enable-sayid t
               clojure-enable-clj-refactor t
@@ -63,7 +69,8 @@ values."
      react
      emoji
      terraform
-     (typescript :variables tide-node-executable "/usr/local/bin/node" typescript-backend 'tide)
+     typescript
+     ;; (typescript :variables tide-node-executable "/usr/local/bin/node" typescript-backend 'tide)
      (org :variables
           org-enable-github-support t
           org-enable-reveal-js-support t)

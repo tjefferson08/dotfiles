@@ -1,0 +1,29 @@
+* 1Password
+* Github + SSH key
+* brew bundle --file Brewfile
+  brew bundle on old machine to generate brewfile of installed stuff
+* keybindings: caps as escape, caps/return hold = ctrl
+  Karabiner-elements + complex modification downloads
+* spaces 1-3
+* displays: rotate?
+* clean up stupid default dock icons
+
+  #+begin_src bash
+    # RESET dock from scratch (or use grep -v to keep a couple?)
+        brew install dockutil
+        dockutil --list | cut -f1 | while read app; do dockutil --remove "$app"; done
+
+  #+end_src
+  move dock to left
+
+* key repeat? ugh need to google this again
+  https://apple.stackexchange.com/questions/10467/how-to-increase-keyboard-key-repeat-rate-on-os-x
+  #+begin_src bash
+
+    defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
+    defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+
+  #+end_src
+* three-finger drag, tap to click, crank up trackpad speed
+* reverse scroll direction
+* iterm prefs: working dir for new tabs, font size, theme, tab cycling

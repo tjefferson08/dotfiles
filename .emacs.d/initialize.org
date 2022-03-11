@@ -221,6 +221,8 @@ not old version that ships with emacs
     (setq js-indent-level 2)
     ;; TODO maybe do this with dir-locals
     (setq js2-strict-missing-semi-warning nil)
+    (eval-after-load 'js-mode
+       '(add-hook 'js-mode-hook #'add-node-modules-path))
     ;; (add-to-list 'spacemacs--prettier-modes 'javascript-mode)
     ;; (add-hook 'javascript-mode-hook 'prettier-js-mode)
     ;; (add-hook 'javascript-mode-hook 'disable-emmet-mode)
@@ -240,4 +242,6 @@ not old version that ships with emacs
 * Ruby config
   #+begin_src emacs-lisp
     (setq rbenv-installation-dir "/usr/local/bin/rbenv")
+
+
   #+end_src

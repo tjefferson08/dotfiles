@@ -242,6 +242,9 @@ not old version that ships with emacs
 * Ruby config
   #+begin_src emacs-lisp
     (setq rbenv-installation-dir "/usr/local/bin/rbenv")
-
-
   #+end_src
+
+* Put undo-tree history in a folder
+#+begin_src emacs-lisp
+  (setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
+#+end_src

@@ -17,6 +17,7 @@ brew "cask"
 brew "docker-compose"
 brew "fzf"
 brew "git"
+
 brew "gnupg"
 brew "httpie"
 brew "ispell"

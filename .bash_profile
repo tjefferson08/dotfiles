@@ -29,7 +29,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # source /usr/local/etc/bash_completion
 # source <(kubectl completion bash)
-# eval "$(rbenv init -)"
+eval "$(rbenv init -)"
 
 alias gup='git pull && git submodule update --init'
 alias rkdbm='rake db:migrate db:test:prepare'

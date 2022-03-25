@@ -4,7 +4,7 @@
 				l = log --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -n 10
 
 [user]
-	email = travis@pathstream.com
+	email = tjefferson@meritamerica.org
 	name = Travis Jefferson
 [branch]
 	autosetuprebase = always

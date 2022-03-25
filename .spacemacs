@@ -348,8 +348,13 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  (setq dotspacemacs-scratch-mode 'emacs-lisp-mode)
 
-  ;; TODO: fix this so absolute path isn't necessary (manually setting HOME fucks this all up)
+  (with-eval-after-load 'lsp-mode
+    (message "after lsp-mode load!")
+    (add-to-list 'lsp-language-id-configuration '(".*\\.erb$" . "html")))
+
+    ;; TODO: fix this so absolute path isn't necessary (manually setting HOME fucks this all up)
   (org-babel-load-file "/Users/travis/dotfiles/.emacs.d/initialize.org"))
 
 ;; Do not write anything past this comment. This is where Emacs will

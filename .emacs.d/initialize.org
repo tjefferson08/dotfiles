@@ -245,3 +245,15 @@ not old version that ships with emacs
 
 
   #+end_src
+
+* Web/html/erb config
+  #+begin_src emacs-lisp
+(setq web-mode-sql-indent-offset 2)
+(setq web-mode-css-indent-offset 2)
+(setq web-mode-markup-indent-offset 2)
+(setq web-mode-code-indent-offset 2)
+(setq web-mode-markup-indent-offset 2)
+(setq web-mode-attr-indent-offset 2)
+(setq web-mode-attr-value-indent-offset 2)
+
+  #+end_src

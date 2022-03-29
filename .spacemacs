@@ -336,6 +336,9 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+
+  (setq lsp-tailwindcss-experimental-class-regex
+        ["class=\"([^\"]*)" "class:\\s*\"([^\"]*)"])
   (setq lsp-tailwindcss-add-on-mode t))
 
 
@@ -349,6 +352,8 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq dotspacemacs-scratch-mode 'emacs-lisp-mode)
+  (add-hook 'web-mode-hook #'lsp)
+
 
   (with-eval-after-load 'lsp-mode
     (message "after lsp-mode load!")

@@ -379,25 +379,31 @@ you should place your code here."
 This is an auto-generated function, do not modify its content directly, use
 Emacs customize menu instead.
 This function is called at the very end of Spacemacs initialization."
- (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
-  '(evil-want-Y-yank-to-eol nil)
-  '(package-selected-packages
-    '(impatient-mode counsel-css counsel swiper ivy ox-gfm csv-mode yapfify yaml-mode sql-indent pyvenv pytest pyenv-mode py-isort pip-requirements ox-reveal noflet live-py-mode hy-mode helm-pydoc helm-dash dash-docs go-guru go-eldoc transient ensime sbt-mode scala-mode dash-at-point cython-mode company-go go-mode company-anaconda clojure-snippets clj-refactor inflections edn paredit peg lv cider-eval-sexp-fu cider sesman queue parseedn clojure-mode parseclj a cargo anaconda-mode pythonic mmm-mode markdown-toc markdown-mode gh-md toml-mode racer flycheck-rust rust-mode org-plus-contrib terraform-mode hcl-mode emoji-cheat-sheet-plus company-emoji org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download htmlize gnuplot less-css-mode web-mode tagedit slim-mode scss-mode sass-mode pug-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data rvm ruby-tools ruby-test-mode rubocop rspec-mode robe rbenv rake minitest chruby bundler inf-ruby prettier-js web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc company-tern dash-functional tern coffee-mode xterm-color unfill smeargle shell-pop orgit mwim multi-term magit-gitflow helm-gitignore gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip evil-magit magit magit-popup git-commit with-editor eshell-z eshell-prompt-extras esh-help auto-dictionary helm-company helm-c-yasnippet fuzzy company-statistics company auto-yasnippet yasnippet ac-ispell auto-complete tide typescript-mode flycheck ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f dash s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async))
-  '(safe-local-variable-values
-    '((lsp-diagnostics-provider . :none)
-      (flycheck-ruby-standard-executable . "/Users/travis/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/standard-1.8.0/exe/standardrb")
-      (flycheck-checker quote ruby-standard)
-      (typescript-backend . tide)
-      (typescript-backend . lsp)
-      (javascript-backend . tide)
-      (javascript-backend . tern)
-      (javascript-backend . lsp)))
-  '(send-mail-function 'smtpmail-send-it))
- (custom-set-faces))
+  (custom-set-variables
+   ;; custom-set-variables was added by Custom.
+   ;; If you edit it by hand, you could mess it up, so be careful.
+   ;; Your init file should contain only one such instance.
+   ;; If there is more than one, they won't work right.
+   '(evil-want-Y-yank-to-eol nil)
+   '(package-selected-packages
+     '(lsp-tailwindcss impatient-mode counsel-css counsel swiper ivy ox-gfm csv-mode yapfify yaml-mode sql-indent pyvenv pytest pyenv-mode py-isort pip-requirements ox-reveal noflet live-py-mode hy-mode helm-pydoc helm-dash dash-docs go-guru go-eldoc transient ensime sbt-mode scala-mode dash-at-point cython-mode company-go go-mode company-anaconda clojure-snippets clj-refactor inflections edn paredit peg lv cider-eval-sexp-fu cider sesman queue parseedn clojure-mode parseclj a cargo anaconda-mode pythonic mmm-mode markdown-toc markdown-mode gh-md toml-mode racer flycheck-rust rust-mode org-plus-contrib terraform-mode hcl-mode emoji-cheat-sheet-plus company-emoji org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download htmlize gnuplot less-css-mode web-mode tagedit slim-mode scss-mode sass-mode pug-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data rvm ruby-tools ruby-test-mode rubocop rspec-mode robe rbenv rake minitest chruby bundler inf-ruby prettier-js web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc company-tern dash-functional tern coffee-mode xterm-color unfill smeargle shell-pop orgit mwim multi-term magit-gitflow helm-gitignore gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip evil-magit magit magit-popup git-commit with-editor eshell-z eshell-prompt-extras esh-help auto-dictionary helm-company helm-c-yasnippet fuzzy company-statistics company auto-yasnippet yasnippet ac-ispell auto-complete tide typescript-mode flycheck ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f dash s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async))
+   '(safe-local-variable-values
+     '((lsp-diagnostics-provider . :none)
+       (flycheck-ruby-standard-executable . "/Users/travis/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/standard-1.8.0/exe/standardrb")
+       (flycheck-checker quote ruby-standard)
+       (typescript-backend . tide)
+       (typescript-backend . lsp)
+       (javascript-backend . tide)
+       (javascript-backend . tern)
+       (javascript-backend . lsp)))
+   '(send-mail-function 'smtpmail-send-it))
+  (custom-set-faces
+   ;; custom-set-faces was added by Custom.
+   ;; If you edit it by hand, you could mess it up, so be careful.
+   ;; Your init file should contain only one such instance.
+   ;; If there is more than one, they won't work right.
+   '(highlight-parentheses-highlight ((nil (:weight ultra-bold))) t))
+  )
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.

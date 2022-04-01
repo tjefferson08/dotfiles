@@ -390,6 +390,7 @@ This function is called at the very end of Spacemacs initialization."
   '(safe-local-variable-values
     '((lsp-diagnostics-provider . :none)
       (flycheck-ruby-standard-executable . "/Users/travis/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/standard-1.8.0/exe/standardrb")
+      (flycheck-ruby-standard-executable . "/usr/local/var/rbenv/versions/3.1.1/bin/standardrb")
       (flycheck-checker quote ruby-standard)
       (typescript-backend . tide)
       (typescript-backend . lsp)

@@ -360,7 +360,7 @@ you should place your code here."
     (add-to-list 'lsp-language-id-configuration '(".*\\.erb$" . "html")))
 
     ;; TODO: fix this so absolute path isn't necessary (manually setting HOME fucks this all up)
-  (org-babel-load-file (expand-file-name "dotfiles/.emacs.d/initialize.org" user-emacs-directory)))
+  (org-babel-load-file (expand-file-name "initialize.org" user-emacs-directory)))
 
 
 ;; Do not write anything past this comment. This is where Emacs will
